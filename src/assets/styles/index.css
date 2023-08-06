@@ -1,0 +1,19 @@
+@import url('./adjustment/reset.css');
+
+.poster-wrapper {
+    max-width: 250px;
+    max-height: 400px;
+}
+
+.poster-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+
+html,
+body,
+#root,
+main,
+main>*{
+    height: 100%;
+}
