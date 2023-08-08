@@ -1,5 +1,9 @@
 @import url('./adjustment/reset.css');
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 .poster-wrapper {
     max-width: 250px;
     max-height: 400px;
