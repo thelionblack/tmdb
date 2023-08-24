@@ -40,6 +40,9 @@ export const tmdbApi = createApi({
     searchActorById: build.query<any, string>({
       query: (id) => `/person/${id}`,
     }),
+    getActorsByMovieId: build.query<any, string>({
+      query: (movieId) => `/movie/${movieId}/credits`,
+    }),
   }),
 });
 
@@ -50,5 +53,6 @@ export const {
   useLazyGetActorsQuery,
   useLazySearchActorsByNameQuery,
   useLazySearchActorByIdQuery,
+  useLazyGetActorsByMovieIdQuery,
 } = tmdbApi;
 export default tmdbApi;

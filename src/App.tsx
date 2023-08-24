@@ -12,6 +12,12 @@ import { ActorPage } from './pages/ActorPage';
 export const App = () => {
   const { theme, colorMode } = useMode();
 
+  function name() {
+    const dsf = 232
+
+    return 1232
+  }
+
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>

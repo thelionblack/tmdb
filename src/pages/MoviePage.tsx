@@ -4,12 +4,12 @@ import { useEffect } from 'react';
 import { useLazySearchMoviesByIdQuery } from '../services/tmdbService';
 import { useParams } from 'react-router-dom';
 import { setMovie } from '../store/reducers/moviesSlice';
+import {ActorFromMovie} from '../components/ActorFromMovie'
 
 export const MoviePage = () => {
   const { currentMovies: movie } = useAppSelector((state) => state.movie);
   const dispatch = useAppDispatch();
-  const [run, { data: dataMovie, isLoading, isError }] =
-    useLazySearchMoviesByIdQuery();
+  const [run, { data: dataMovie, isLoading, isError }] = useLazySearchMoviesByIdQuery();
   const { id = '' } = useParams();
 
   useEffect(() => {
@@ -96,6 +96,7 @@ export const MoviePage = () => {
           </Stack>
         </Stack>
       </Stack>
+      <ActorFromMovie />
     </>
   );
 };
